@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>وب‌سایت فیلم‌ها</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>فیلم‌ها</h1>
+    <div class="video-gallery">
+      <% videos.forEach(video => { %>
+        <div class="video-card">
+          <video width="300" controls>
+            <source src="/videos/<%= video %>" type="video/mp4">
+            مرورگر شما از تگ ویدئو پشتیبانی نمی‌کند.
+          </video>
+          <h3><%= video %></h3>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>
